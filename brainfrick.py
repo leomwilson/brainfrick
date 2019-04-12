@@ -44,7 +44,7 @@ while i < len(c): # interpret the file, step by step
     elif ch == '[':
         l.append(i + 1)
     elif ch == ']':
-        if arr[pointer] == 0:
+        if arr[pointer] <= 0:
             del l[-1]
         else:
             i = l[-1] - 1 # -1 makes it +0 when i += 1
