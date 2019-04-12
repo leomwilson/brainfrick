@@ -23,7 +23,7 @@ for ln in fileinput.input(): # get a list of the executeable characters in the f
             c.append(ch)
 print(colours['green'] + 'Compressed code: ' + colours['blue'] + ''.join(c) + colours['white'])
 
-stop_all = input(colours['green'] + 'Stop for input only [y/N]?' + colours['white']).lower() != 'y'
+stop_all = input(colours['green'] + 'Stop for input/output only [y/N]?' + colours['white']).lower() != 'y'
 
 i = 0 # the for loop might not look python-y, but this is neccessary for loops
 while i < len(c): # interpret the file, step by step
