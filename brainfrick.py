@@ -57,12 +57,12 @@ while i < len(c): # interpret the file, step by step
     elif ch == '.':
         out += chr(arr[pointer])
         print(colours['green'] + 'Output: ' + colours['white'] + chr(arr[pointer]) + colours['orange'] + ' (' + str(arr[pointer]) + ')' + colours['white'])
-    print(colours['green'] + 'Values (Anything not listed is zero):' + colours['white'])
+    print(colours['green'] + 'Values (anything not listed is zero):' + colours['white'])
     r = ''
     for p, v in enumerate(arr):
-        if v != 0:
-            r += colours['green'] + ('' if r == '' else ' | ') + 'arr[' + colours['orange'] + str(p) + colours['green'] + '] = ' + colours['orange'] + str(v)
-    print(r)
+        if v != 0 or p == pointer:
+            r += colours['green'] + ('' if r == '' else ' | ') + (colours['purple'] + '*' + colours['green'] if p == pointer else '') + 'arr[' + colours['orange'] + str(p) + colours['green'] + '] = ' + colours['orange'] + str(v)
+    print(r + colours['white'])
     if stop_all or ch == '.':
         input(colours['purple'] + 'Press enter to continue.' + colours['white'])
     i += 1
